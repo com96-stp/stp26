@@ -1,3 +1,4 @@
+import { useLandingMotion } from './hooks/useLandingMotion'
 import { Header } from './components/molecules/Header'
 import { Ticker } from './components/molecules/Ticker'
 import { HeroSection } from './components/sections/HeroSection'
@@ -10,6 +11,8 @@ import { CreativitySection } from './components/sections/CreativitySection'
 import { FooterSection } from './components/sections/FooterSection'
 
 export default function App() {
+  useLandingMotion()
+
   return (
     <>
       <Header />

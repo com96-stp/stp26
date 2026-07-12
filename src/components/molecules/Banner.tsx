@@ -9,11 +9,13 @@ interface BannerProps {
   ctaLabel: string
   ctaHref?: string
   /**
-   * Layout size (UI Kit variant):
-   * - 'mobile' (size=S): media stacked above content (vertical)
-   * - 'desktop' (size=xl): media and content side-by-side (horizontal), content vertically centered
+   * Layout (UI Kit variant), responsive:
+   * - 'mobile' (default): always stacked (media above content)
+   * - 'desktop' (size=xl): stacked on mobile, media+content side-by-side from `xl:` up
    */
   size?: 'mobile' | 'desktop'
+  /** Desktop (xl) only: swap sides — media on the right, content on the left. */
+  reverse?: boolean
 }
 
 export function Banner({
@@ -25,25 +27,35 @@ export function Banner({
   ctaLabel,
   ctaHref = '#',
   size = 'mobile',
+  reverse = false,
 }: BannerProps) {
-  const isDesktop = size === 'desktop'
+  const responsive = size === 'desktop'
+
+  const rootCls = [
+    'flex flex-col gap-[var(--spacing-24)] items-start w-full',
+    responsive && `${reverse ? 'xl:flex-row-reverse' : 'xl:flex-row'} xl:gap-[var(--desktop-gutter)]`,
+  ]
+    .filter(Boolean)
+    .join(' ')
+
+  const mediaCls = [
+    'relative rounded-[var(--radius-lg)] overflow-hidden w-full',
+    responsive && 'xl:w-auto xl:flex-1',
+  ]
+    .filter(Boolean)
+    .join(' ')
+
+  const contentCls = [
+    'flex flex-col gap-[var(--spacing-24)] items-start w-full',
+    responsive && 'xl:w-auto xl:flex-1 xl:justify-center xl:self-stretch',
+  ]
+    .filter(Boolean)
+    .join(' ')
 
   return (
-    <div
-      className={
-        isDesktop
-          ? 'flex flex-row gap-[var(--spacing-32)] items-start w-full'
-          : 'flex flex-col gap-[var(--spacing-24)] items-start w-full'
-      }
-    >
+    <div className={rootCls}>
       {/* Square media */}
-      <div
-        className={[
-          'relative rounded-[var(--radius-lg)] overflow-hidden',
-          isDesktop ? 'flex-1' : 'w-full',
-        ].join(' ')}
-        style={{ aspectRatio: '1 / 1' }}
-      >
+      <div className={mediaCls} style={{ aspectRatio: '1 / 1' }}>
         <img
           src={imageSrc}
           alt=""
@@ -53,12 +65,7 @@ export function Banner({
       </div>
 
       {/* Content */}
-      <div
-        className={[
-          'flex flex-col gap-[var(--spacing-24)] items-start',
-          isDesktop ? 'flex-1 justify-center self-stretch' : 'w-full',
-        ].join(' ')}
-      >
+      <div className={contentCls}>
         {/* Copy */}
         <div className="flex flex-col gap-[var(--spacing-24)] items-start w-full">
           {/* Kelsi display heading */}

@@ -8,9 +8,9 @@ interface BannerSlimProps {
   ctaHref?: string
   bg?: 'cold' | 'warm-1'
   /**
-   * Layout size (UI Kit variant):
-   * - 'mobile' (size=s): content stacked above the CTA (vertical)
-   * - 'desktop' (size=xl): content and CTA side-by-side (horizontal), vertically centered
+   * Layout (UI Kit variant), responsive:
+   * - 'mobile' (default): always stacked (content above CTA) — the "s" variant
+   * - 'desktop' (size=xl): stacked on mobile, content+CTA side-by-side from `xl:` up
    */
   size?: 'mobile' | 'desktop'
   className?: string
@@ -31,29 +31,28 @@ export function BannerSlim({
   size = 'mobile',
   className = '',
 }: BannerSlimProps) {
-  const isDesktop = size === 'desktop'
+  const responsive = size === 'desktop'
+
+  const rootCls = [
+    'flex flex-col gap-[var(--spacing-40)] items-start justify-center',
+    'p-[var(--spacing-40)] rounded-[var(--radius-lg)] w-full',
+    responsive && 'xl:flex-row xl:items-center',
+    className,
+  ]
+    .filter(Boolean)
+    .join(' ')
+
+  const contentCls = [
+    'flex flex-col gap-[var(--spacing-16)] items-start w-full',
+    responsive && 'xl:w-auto xl:flex-1',
+  ]
+    .filter(Boolean)
+    .join(' ')
 
   return (
-    <div
-      className={[
-        isDesktop
-          ? 'flex flex-row gap-[var(--spacing-40)] items-center'
-          : 'flex flex-col gap-[var(--spacing-40)] items-start justify-center',
-        'p-[var(--spacing-40)] rounded-[var(--radius-lg)] w-full',
-        className,
-      ]
-        .filter(Boolean)
-        .join(' ')}
-      style={{ backgroundColor: bgColors[bg] }}
-    >
+    <div className={rootCls} style={{ backgroundColor: bgColors[bg] }}>
       {/* Text content */}
-      <div
-        className={[
-          'flex flex-col gap-[var(--spacing-16)] items-start',
-          isDesktop ? 'flex-1' : 'w-full',
-        ].join(' ')}
-        style={{ color: 'var(--color-neutral-0)' }}
-      >
+      <div className={contentCls} style={{ color: 'var(--color-neutral-0)' }}>
         {eyebrow && (
           <p
             className="font-[family-name:var(--font-primary)] w-full"
@@ -92,7 +91,7 @@ export function BannerSlim({
         label={ctaLabel}
         variant="on-indigo-secondary"
         href={ctaHref}
-        className={isDesktop ? 'shrink-0' : ''}
+        className={responsive ? 'xl:shrink-0' : ''}
       />
     </div>
   )

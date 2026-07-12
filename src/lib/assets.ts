@@ -16,6 +16,11 @@ import decorativeSegment from '../asset/decorative/variant=Segment.png'
 import filRougeBlu from '../asset/Fil Rouge blu mobile.png'
 import filRougeRed from '../asset/Fil Rouge red 2 mobile.png'
 import filRougeRedHero from '../asset/Fil Rouge Red hero mobile.png'
+// Desktop (xl) decorative variants
+import filRougeBluDesk from '../asset/Fil Rouge blu desk.svg'
+import filRougeRedDesk from '../asset/Fil Rouge red 2 desk.png'
+import filRougeRedHeroDesk from '../asset/Fil Rouge Red hero desk.svg'
+import pinLocation from '../asset/Pin Location.svg'
 import hart from '../asset/Hart Collab.svg'
 
 // Merch
@@ -43,6 +48,10 @@ export const DECORATIVE_SEGMENT = decorativeSegment
 export const FIL_ROUGE_BLU = filRougeBlu
 export const FIL_ROUGE_RED = filRougeRed
 export const FIL_ROUGE_RED_HERO = filRougeRedHero
+export const FIL_ROUGE_BLU_DESK = filRougeBluDesk
+export const FIL_ROUGE_RED_DESK = filRougeRedDesk
+export const FIL_ROUGE_RED_HERO_DESK = filRougeRedHeroDesk
+export const PIN_LOCATION = pinLocation
 export const HART = hart
 
 // Merch

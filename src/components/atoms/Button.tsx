@@ -45,7 +45,9 @@ export function Button({
         'font-[family-name:var(--font-primary)]',
         'tracking-[var(--tracking-base)]',
         'whitespace-nowrap select-none cursor-pointer',
-        'transition-[background-color,box-shadow] duration-200 ease-out',
+        // Hover (bg / inset stroke) + press feedback; only colour + transform, strong ease-out
+        'transition-[background-color,box-shadow,transform] duration-150 ease-[var(--ease-out)]',
+        'active:scale-[0.97]',
         variantStyles[variant],
         className,
       ]
