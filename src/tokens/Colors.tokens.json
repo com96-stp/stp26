@@ -100,7 +100,7 @@
         }
       }
     },
-    "warm 1": {
+    "warm-1": {
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
@@ -125,7 +125,7 @@
         }
       }
     },
-    "warm 2": {
+    "warm-2": {
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
@@ -150,7 +150,7 @@
         }
       }
     },
-    "warm 3": {
+    "warm-3": {
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
@@ -175,7 +175,7 @@
         }
       }
     },
-    "fresh 1": {
+    "fresh-1": {
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
@@ -200,7 +200,7 @@
         }
       }
     },
-    "fresh 2": {
+    "fresh-2": {
       "$type": "color",
       "$value": {
         "colorSpace": "srgb",
@@ -742,7 +742,7 @@
   },
   "feedback": {
     "Success": {
-      "Background Subtle": {
+      "Background-Subtle": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -839,7 +839,7 @@
       }
     },
     "Warning": {
-      "Background Subtle": {
+      "Background-Subtle": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -936,7 +936,7 @@
       }
     },
     "Error": {
-      "Background Subtle": {
+      "Background-Subtle": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -1033,7 +1033,7 @@
       }
     },
     "Info": {
-      "Background Subtle": {
+      "Background-Subtle": {
         "$type": "color",
         "$value": {
           "colorSpace": "srgb",
@@ -1131,6 +1131,6 @@
     }
   },
   "$extensions": {
-    "com.figma.modeName": "Mode 1"
+    "com.figma.modeName": "Colors"
   }
 }

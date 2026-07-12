@@ -34,6 +34,22 @@
         }
       }
     },
+    "12": {
+      "$type": "number",
+      "$value": 12,
+      "$extensions": {
+        "com.figma.variableId": "VariableID:16:211",
+        "com.figma.scopes": [
+          "ALL_SCOPES"
+        ],
+        "com.figma.aliasData": {
+          "targetVariableId": "VariableID:f1f6811da83736d318513988e6a81897b9a87337/-1:-1",
+          "targetVariableName": "Sizing/1,5",
+          "targetVariableSetId": "VariableCollectionId:5cfd303679ae19d9f3d16105739dc13b80e54a55/-1:-1",
+          "targetVariableSetName": "Primitive"
+        }
+      }
+    },
     "16": {
       "$type": "number",
       "$value": 16,
@@ -478,6 +494,6 @@
     }
   },
   "$extensions": {
-    "com.figma.modeName": "Mode 1"
+    "com.figma.modeName": "Spacing"
   }
 }

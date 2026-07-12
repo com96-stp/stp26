@@ -212,6 +212,6 @@
     }
   },
   "$extensions": {
-    "com.figma.modeName": "Desktop xl"
+    "com.figma.modeName": "Breakpoints"
   }
 }
