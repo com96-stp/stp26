@@ -52,5 +52,4 @@ docs/
 
 ## Known follow-ups
 
-- `MAP_IMAGE` in `src/lib/assets.ts` is still a Figma-hosted URL (expires 2026-07-18) — download it locally and import it like the other assets before launch.
 - CTA links are placeholders (`href="#"`); wire real destinations before launch.

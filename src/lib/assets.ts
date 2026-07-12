@@ -29,6 +29,9 @@ import merchBag from '../asset/merch/stp-bag.png'
 import collageMusic from '../asset/collage/music-cover.png'
 import collageWorkshop from '../asset/collage/workshop-cover.png'
 
+// Location map
+import mapImage from '../asset/map.png'
+
 // Menu icons — hamburger (menu closed) / X (menu open)
 import iconHamburger from '../asset/icons/menu-hamburger.svg'
 import iconClose from '../asset/icons/menu-close.svg'
@@ -63,6 +66,5 @@ export const COLLAGE_WORKSHOP = collageWorkshop
 export const ICON_HAMBURGER = iconHamburger
 export const ICON_CLOSE = iconClose
 
-// Map — still Figma-hosted (no local asset available); URL expires 2026-07-18.
-// TODO: download into src/asset/ and import it like the rest before launch.
-export const MAP_IMAGE = 'https://www.figma.com/api/mcp/asset/52467b7d-f0ea-4666-83f5-d858fecb66ec'
+// Map (Location section) — local asset, no external dependency
+export const MAP_IMAGE = mapImage
