@@ -26,3 +26,8 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Media (kept out of the code repo)
+*.mov
+*.mp4
+*.mp3

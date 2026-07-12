@@ -1,43 +1,40 @@
 // Centralized asset references — always import from here, never inline in components.
 // Local assets are imported so Vite bundles + hashes them (works in dev AND in the
-// production build). Referencing them as plain "/src/..." strings would 404 in the
-// build because Vite does not copy src/ files that aren't imported as modules.
+// production build). Referencing them as plain "/src/..." strings would 404 in the build.
 
 // Logos
-import logoExtended from '../asset/Loghi/STP_Logo_Extended.svg'
-import logoExtendedWhite from '../asset/Loghi/STP_Logo_Extended_W.svg'
-import logoCondensed from '../asset/Loghi/STP_Logo Condensed.svg'
-import laMarinaLogo from '../asset/Loghi/La marina logo.svg'
+import logoExtended from '../asset/logos/stp-logo-extended.svg'
+import logoCondensed from '../asset/logos/stp-logo-condensed.svg'
+import laMarinaLogo from '../asset/logos/la-marina-logo.svg'
 
 // Decorative
-import decorativeStripe from '../asset/decorative/variant=Stripe.png'
-import decorativeSpiral from '../asset/decorative/variant=Spiral.png'
-import decorativeSegment from '../asset/decorative/variant=Segment.png'
-import filRougeBlu from '../asset/Fil Rouge blu mobile.png'
-import filRougeRed from '../asset/Fil Rouge red 2 mobile.png'
-import filRougeRedHero from '../asset/Fil Rouge Red hero mobile.png'
+import decorativeStripe from '../asset/decorative/stripe.png'
+import decorativeSpiral from '../asset/decorative/spiral.png'
+import decorativeSegment from '../asset/decorative/segment.png'
+import filRougeBlu from '../asset/fil-rouge-blu-mobile.png'
+import filRougeRed from '../asset/fil-rouge-red-2-mobile.png'
+import filRougeRedHero from '../asset/fil-rouge-red-hero-mobile.png'
 // Desktop (xl) decorative variants
-import filRougeBluDesk from '../asset/Fil Rouge blu desk.svg'
-import filRougeRedDesk from '../asset/Fil Rouge red 2 desk.png'
-import filRougeRedHeroDesk from '../asset/Fil Rouge Red hero desk.svg'
-import pinLocation from '../asset/Pin Location.svg'
-import hart from '../asset/Hart Collab.svg'
+import filRougeBluDesk from '../asset/fil-rouge-blu-desk.svg'
+import filRougeRedDesk from '../asset/fil-rouge-red-2-desk.png'
+import filRougeRedHeroDesk from '../asset/fil-rouge-red-hero-desk.svg'
+import pinLocation from '../asset/pin-location.svg'
+import hart from '../asset/hart-collab.svg'
 
 // Merch
-import merchTee from '../asset/MerchSection/media 1 stp tee.png'
-import merchBag from '../asset/MerchSection/media 2 stp bag.png'
+import merchTee from '../asset/merch/stp-tee.png'
+import merchBag from '../asset/merch/stp-bag.png'
 
 // Collage (Artists section)
-import collageMusic from '../asset/collage/variant=music cover.png'
-import collageWorkshop from '../asset/collage/variant=workshop cover.png'
+import collageMusic from '../asset/collage/music-cover.png'
+import collageWorkshop from '../asset/collage/workshop-cover.png'
 
-// Menu icons — Figma variant names: state=close = hamburger (menu closed), state=open = X (menu open)
-import iconHamburger from '../asset/icons/state=close.svg'
-import iconClose from '../asset/icons/state=open.svg'
+// Menu icons — hamburger (menu closed) / X (menu open)
+import iconHamburger from '../asset/icons/menu-hamburger.svg'
+import iconClose from '../asset/icons/menu-close.svg'
 
 // Logos
 export const LOGO_EXTENDED = logoExtended
-export const LOGO_EXTENDED_WHITE = logoExtendedWhite
 export const LOGO_CONDENSED = logoCondensed
 export const LA_MARINA_LOGO = laMarinaLogo
 

@@ -1,6 +1,8 @@
 {
   "name": "stp-26-landing",
+  "description": "Landing page for Stop all'Ansia 26 (STP 26) festival — React + Vite + Tailwind v4.",
   "private": true,
+  "license": "UNLICENSED",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
