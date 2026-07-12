@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+/* ─── Tailwind v4 Design Tokens ─── */
+@theme {
+  /* Colors */
+  --color-page-primary: #FCF8F5;
+  --color-page-inverse: #000000;
+  --color-text-default: #000000;
+  --color-text-accent: #960011;
+  --color-text-inverse: #FCF8F5;
+  --color-neutral-0: #FCF8F5;
+  --color-neutral-1000: #1A1A1A;
+  --color-neutral-500: #352927;
+  --color-amber-800: #960011;
+  --color-indigo-800: #273CB2;
+  --color-emerald-50: #F2F8F2;
+  --color-action-accent: #960011;
+  --color-action-accent-hover: #4D100F;
+  --color-action-accent-content: #FCF8F5;
+  --color-action-accent-secondary-content: #960011;
+  --color-action-on-indigo: #F3F6FF;
+  --color-action-on-indigo-hover: #E0E8FE;
+  --color-action-on-indigo-content: #273CB2;
+  --color-action-on-indigo-secondary-content: #FCF8F5;
+  --color-section-default: #FCF8F5;
+  --color-section-inverse: #000000;
+  --color-section-subtle: #C9D8FE;
+  --color-section-fresh: #C6E1C8;
+  --color-section-warm: #F5E8C3;
+  --color-section-accent: #F03D3D;
+  --color-section-cold: #273CB2;
+  --color-bg-accent-subtle: #FDCAC4;
+  --color-bg-warm-1: #763D00;
+  --color-bg-warm-2: #EFD791;
+  --color-bg-warm-3: #EED2BE;
+  --color-bg-fresh-1: #005F23;
+  --color-bg-fresh-2: #C6E1C8;
+  --color-bg-cold: #273CB2;
+  --color-bg-neutral: #FCF8F5;
+
+  /* Font Families */
+  --font-primary: 'Neue Regrade', sans-serif;
+  --font-display: 'Kelsi', sans-serif;
+
+  /* Font Sizes */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 40px;
+  --text-4xl: 48px;
+  --text-5xl: 60px;
+
+  /* Line Heights */
+  --leading-xs: 15px;
+  --leading-sm: 21px;
+  --leading-base: 24px;
+  --leading-lg: 27px;
+  --leading-xl: 36px;
+  --leading-2xl: 40px;
+  --leading-3xl: 60px;
+  --leading-4xl: 72px;
+  --leading-5xl: 90px;
+
+  /* Letter Spacing */
+  --tracking-xs: 1.5px;
+  --tracking-sm: 0px;
+  --tracking-base: 0px;
+
+  /* Font Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  /* Spacing */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-56: 56px;
+  --spacing-64: 64px;
+  --spacing-72: 72px;
+  --spacing-80: 80px;
+  --spacing-96: 96px;
+  --spacing-112: 112px;
+
+  /* Mobile grid */
+  --mobile-margin: 16px;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+}
+
+/* ─── @font-face ─── */
+/* Neue Regrade — variable font (covers all weights 100–900) */
+@font-face {
+  font-family: 'Neue Regrade';
+  src: url('/src/Font/Neue Regrade/Neue Regrade Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Kelsi fill — display font for merch headings only */
+@font-face {
+  font-family: 'Kelsi';
+  src: url('/src/Font/Kelsi/Kelsi-fill.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Base styles ─── */
+/* Wrapped in @layer base so Tailwind's utility classes (in @layer utilities)
+   always override these. Box-sizing/margin/padding reset is already provided
+   by Tailwind Preflight — re-declaring it unlayered here would beat the utility
+   layer and silently break every px-/py-/p-/m- spacing utility. */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-page-primary);
+    color: var(--color-text-default);
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+    line-height: var(--leading-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  img,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+/* ─── Ticker animation ─── */
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  animation: ticker-scroll 22s linear infinite;
+  will-change: transform;
+}
