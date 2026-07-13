@@ -2,6 +2,9 @@ import { Container } from '../layout/Container'
 import { CardTicket } from '../molecules/CardTicket'
 import { DECORATIVE_STRIPE, DECORATIVE_SEGMENT } from '../../lib/assets'
 
+// DOM order = mobile stack order (Full festival first, as the featured tier).
+// `xlOrder` re-sequences the row on desktop only so the featured "Full festival"
+// card sits in the center column for extra prominence.
 const tickets = [
   {
     name: 'Full festival',
@@ -10,6 +13,7 @@ const tickets = [
     originalPrice: '150 €',
     bg: 'var(--color-bg-fresh-2)',
     showBestTag: true,
+    xlOrder: 'xl:order-2',
   },
   {
     name: 'Friday only pass',
@@ -18,6 +22,7 @@ const tickets = [
     bg: 'var(--color-bg-warm-2)',
     decorative: DECORATIVE_STRIPE,
     showBestTag: false,
+    xlOrder: 'xl:order-1',
   },
   {
     name: 'Saturday only pass',
@@ -26,6 +31,7 @@ const tickets = [
     bg: 'var(--color-bg-warm-3)',
     decorative: DECORATIVE_SEGMENT,
     showBestTag: false,
+    xlOrder: 'xl:order-3',
   },
 ]
 
@@ -65,8 +71,8 @@ export function TicketSection() {
 
         {/* Card list — stacked on mobile, 3 inline filling width from xl */}
         <div className="flex flex-col gap-[var(--spacing-24)] w-full xl:flex-row xl:gap-[var(--desktop-gutter)] xl:items-stretch">
-          {tickets.map((ticket) => (
-            <div key={ticket.name} className="w-full xl:flex-1">
+          {tickets.map(({ xlOrder, ...ticket }) => (
+            <div key={ticket.name} className={`w-full xl:flex-1 ${xlOrder}`}>
               <CardTicket {...ticket} href="#" />
             </div>
           ))}

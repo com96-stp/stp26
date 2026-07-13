@@ -24,7 +24,7 @@ export function CardTicket({
 }: CardTicketProps) {
   return (
     <div
-      className="relative flex flex-col gap-[var(--spacing-16)] rounded-[var(--radius-lg)] px-[var(--spacing-24)] py-[var(--spacing-24)] overflow-hidden w-full"
+      className="relative flex flex-col gap-[var(--spacing-16)] rounded-[var(--radius-lg)] px-[var(--spacing-24)] py-[var(--spacing-24)] overflow-hidden w-full xl:h-full"
       style={{ backgroundColor: bg }}
     >
       {/* Decorative — absolute bottom-right */}
@@ -67,8 +67,8 @@ export function CardTicket({
         {description}
       </p>
 
-      {/* Footer: price + CTA */}
-      <div className="relative z-10 flex flex-wrap items-center gap-[var(--spacing-8)]">
+      {/* Footer: price + CTA — pushed to the bottom on desktop (equal-height cards) */}
+      <div className="relative z-10 flex flex-wrap items-center gap-[var(--spacing-8)] xl:mt-auto">
         {/* Price */}
         <div
           className="flex flex-1 items-center gap-[var(--spacing-8)] font-[family-name:var(--font-primary)]"

@@ -8,19 +8,19 @@ export function HeroSection() {
       className="relative py-[var(--spacing-40)] xl:py-[var(--spacing-80)]"
       style={{ backgroundColor: 'var(--color-page-primary)' }}
     >
-      {/* Fil Rouge Red decorative — mobile (subtle scroll parallax) */}
+      {/* Fil Rouge Red decorative — mobile (subtle scroll parallax); centered horizontally */}
       <img
         src={FIL_ROUGE_RED_HERO}
         aria-hidden="true"
         alt=""
         data-parallax="0.06"
-        data-pbase="translateY(-50%)"
+        data-pbase="translate(-50%, -50%)"
         className="absolute pointer-events-none xl:hidden"
         style={{
           top: '50%',
-          left: '-18px',
+          left: '50%',
           width: '425px',
-          transform: 'translateY(-50%)',
+          transform: 'translate(-50%, -50%)',
           zIndex: 0,
         }}
       />
