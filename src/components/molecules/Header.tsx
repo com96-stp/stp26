@@ -2,14 +2,17 @@ import { useState } from 'react'
 import { Button } from '../atoms/Button'
 import { NavItem } from '../atoms/NavItem'
 import { LOGO_CONDENSED, ICON_HAMBURGER, ICON_CLOSE } from '../../lib/assets'
+import { HIDDEN_SECTIONS } from '../../lib/sectionVisibility'
 
-const navLinks = [
-  { label: 'TICKETS', href: '#tickets' },
-  { label: 'LOCATION', href: '#location' },
-  { label: 'ARTISTS', href: '#artists' },
-  { label: 'MERCH', href: '#merch' },
-  { label: 'COLLABORATE W US', href: '#collaborate' },
+const allNavLinks = [
+  { label: 'TICKETS', href: '#tickets', key: 'tickets' },
+  { label: 'LOCATION', href: '#location', key: 'location' },
+  { label: 'ARTISTS', href: '#artists', key: 'artists' },
+  { label: 'MERCH', href: '#merch', key: 'merch' },
+  { label: 'COLLABORATE W US', href: '#collaborate', key: 'collaborate' },
 ]
+
+const navLinks = allNavLinks.filter((link) => !HIDDEN_SECTIONS.has(link.key))
 
 const frostedBg = {
   backgroundColor: 'rgba(252,248,245,0.8)',
