@@ -60,7 +60,7 @@ export function ArtistsSection() {
               fontSize: 'var(--text-sm)',
             }}
           >
-            MOLTO PIÙ DI UN FESTIVAL
+            MORE THAN JUST A FESTIVAL
           </p>
           <p
             className="font-[family-name:var(--font-primary)] w-full"
@@ -70,7 +70,7 @@ export function ArtistsSection() {
               lineHeight: 'var(--leading-3xl)',
             }}
           >
-            Musica, arte, performance
+            Music, art, performances
           </p>
           <p
             className="font-[family-name:var(--font-primary)] w-full"
@@ -80,7 +80,7 @@ export function ArtistsSection() {
               lineHeight: 'var(--leading-lg)',
             }}
           >
-            Gli artisti che renderanno STP un'edizione fantastica
+            Artists who will make STP an unforgettable edition
           </p>
         </div>
 
@@ -91,8 +91,8 @@ export function ArtistsSection() {
               imageSrc={COLLAGE_MUSIC}
               tag="music"
               tagVariant="blue"
-              heading="Generi diversi, stesso amore"
-              description="Dal pomeriggio a tarda notte, per non perdere mai il ritmo giusto."
+              heading="Different genres, same passion"
+              description="From afternoon to late night, keeping the perfect rhythm all along."
             />
           </div>
           <div className="w-full xl:w-[358px]">
@@ -100,15 +100,15 @@ export function ArtistsSection() {
               imageSrc={COLLAGE_WORKSHOP}
               tag="workshop"
               tagVariant="green"
-              heading="Arte è anche saper fare"
-              description="Workshop didattici e pratici per conoscere cose nuove e non smettere mai di imparare."
+              heading="Art is also about skill"
+              description="Hands-on workshops to learn new things and keep growing."
             />
           </div>
         </div>
 
         {/* CTA */}
         <Button
-          label="Update on Instagram"
+          label="Updates on Instagram"
           variant="on-indigo"
           href="#"
           className="w-full xl:w-auto"
@@ -116,9 +116,9 @@ export function ArtistsSection() {
 
         {/* BannerSlim — full-width horizontal (xl) */}
         <BannerSlim
-          title="Hai un progetto da proporci?"
-          description={`Musica, arte visiva, performance, workshop, lecture. Qualunque forma abbia l'arte, per noi ha senso.`}
-          ctaLabel="Proponi il tuo progetto"
+          title="Do you have a project to share?"
+          description="Music, visual art, performance, workshops, lectures. Whatever form art takes, it matters to us."
+          ctaLabel="Submit your project"
           bg="cold"
           size="desktop"
           className="w-full"

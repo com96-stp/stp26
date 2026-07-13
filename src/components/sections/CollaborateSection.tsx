@@ -34,7 +34,7 @@ export function CollaborateSection() {
               lineHeight: 'var(--leading-3xl)',
             }}
           >
-            Fai parte di STP
+            Be part of STP
           </p>
           <p
             className="font-[family-name:var(--font-primary)] w-full"
@@ -44,9 +44,7 @@ export function CollaborateSection() {
               lineHeight: 'var(--leading-lg)',
             }}
           >
-            Ci sono due modi per entrare nel progetto:<br />
-            uno è portare un progetto, un'idea, un suono, un laboratorio.<br />
-            l'altro è essere parte di quello che tiene tutto insieme, come volontario.
+            There are two ways to join the project: bring a project, idea, sound, or workshop, or be part of the team that holds everything together as a volunteer.
           </p>
         </div>
 
@@ -55,9 +53,9 @@ export function CollaborateSection() {
           <div className="w-full xl:flex-1">
             <BannerSlim
               eyebrow="CALL FOR ARTISTS"
-              title="Hai un progetto da proporci?"
-              description={`Musica, arte visiva, performance, workshop, lecture. Qualunque forma abbia l'arte, per noi ha senso.`}
-              ctaLabel="Proponi il tuo progetto"
+              title="Do you have a project to share?"
+              description="Music, visual art, performance, workshops, lectures. Whatever form art takes, it matters to us."
+              ctaLabel="Submit your project"
               bg="cold"
               ctaHref="#"
             />
@@ -65,9 +63,9 @@ export function CollaborateSection() {
           <div className="w-full xl:flex-1">
             <BannerSlim
               eyebrow="CALL FOR VOLUNTEERS"
-              title="Vuoi darci una mano?"
-              description="Controlli agli ingressi, servizio bar, ordine e pulizia o semplicemente rispondere alle domande dei partecipanti."
-              ctaLabel="Iscriviti come volontario"
+              title="Want to lend a hand?"
+              description="Entrance checks, bar service, order and cleaning, or simply answering participants' questions."
+              ctaLabel="Submit your project"
               bg="warm-1"
               ctaHref="#"
             />

@@ -42,8 +42,7 @@ export function MerchSection() {
               lineHeight: 'var(--leading-lg)',
             }}
           >
-            Per portare STP a lavoro, in vacanza, ovunque ti serva.<br />
-            To avoid unnecessary waste, we ask you to pre-order in advance.
+            Take STP with you to work, on vacation, anywhere you need. To reduce waste, pre-order in advance.
           </p>
         </div>
 
@@ -51,7 +50,7 @@ export function MerchSection() {
         <Banner
           imageSrc={MERCH_TEE}
           heading="STP Tee"
-          description={`The shirt is made entirely of GOTS-certified sustainable organic cotton.\n\nShirt: Stanley Stella Sparker - Relaxed/Over fit - 100% spun and combed organic cotton, 220 GSM - 1x1 rib crew neck. Printed back and front.`}
+          description={`This shirt is made entirely from GOTS-certified sustainable organic cotton.\n\nShirt: Stanley Stella Sparker - Relaxed/Over fit - 100% spun and combed organic cotton, 220 GSM - 1x1 rib crew neck. Printed front and back.`}
           price="30 €"
           originalPrice="40 €"
           ctaLabel="Pre-order your tee"
@@ -62,8 +61,8 @@ export function MerchSection() {
         {/* STP Bag — xl variant */}
         <Banner
           imageSrc={MERCH_BAG}
-          heading="stp bag"
-          description={`The bag is made entirely of GOTS-certified sustainable organic cotton.\n\nStanley Stella - Relaxed fit - 100% spun and combed organic cotton. Printed front.`}
+          heading="STP Bag"
+          description={`This bag is made entirely from GOTS-certified sustainable organic cotton.\n\nMaterial: 100% spun and combed organic cotton, durable and eco-friendly.`}
           price="15 €"
           originalPrice="20 €"
           ctaLabel="Pre-order your bag"

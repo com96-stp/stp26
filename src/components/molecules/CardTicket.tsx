@@ -8,7 +8,7 @@ interface CardTicketProps {
   originalPrice?: string
   href?: string
   bg: string
-  decorative: string
+  decorative?: string
   showBestTag?: boolean
 }
 
@@ -28,13 +28,15 @@ export function CardTicket({
       style={{ backgroundColor: bg }}
     >
       {/* Decorative — absolute bottom-right */}
-      <img
-        src={decorative}
-        aria-hidden="true"
-        alt=""
-        className="absolute bottom-0 right-0 pointer-events-none"
-        style={{ height: '170px', width: '300px', objectFit: 'cover' }}
-      />
+      {decorative && (
+        <img
+          src={decorative}
+          aria-hidden="true"
+          alt=""
+          className="absolute bottom-0 right-0 pointer-events-none"
+          style={{ height: '170px', width: '300px', objectFit: 'cover' }}
+        />
+      )}
 
       {/* Heading row */}
       <div className="relative z-10 flex items-center justify-between gap-[10px]">

@@ -42,21 +42,17 @@ export function CreativitySection() {
       />
 
       <Container data-reveal className="relative z-10 flex flex-col items-center">
-        {/* Quote with mixed weights */}
+        {/* Quote — uniform bold, per Figma (single text node, no mixed weights) */}
         <p
           className="font-[family-name:var(--font-primary)] text-center xl:max-w-[900px]"
           style={{
+            fontWeight: 'var(--weight-bold)' as unknown as number,
             fontSize: 'var(--text-4xl)',
             lineHeight: 'var(--leading-4xl)',
             color: 'var(--color-neutral-1000)',
           }}
         >
-          <span style={{ fontWeight: 'var(--weight-regular)' as unknown as number }}>Creativity has not</span>
-          {' '}
-          <span style={{ fontWeight: 'var(--weight-bold)' as unknown as number }}>disappeared,</span>
-          <br />
-          <span style={{ fontWeight: 'var(--weight-regular)' as unknown as number }}>it just </span>
-          <span style={{ fontWeight: 'var(--weight-bold)' as unknown as number }}>needs space</span>
+          Creativity hasn't disappeared, it just needs space
         </p>
       </Container>
     </section>

@@ -1,28 +1,27 @@
 import { Container } from '../layout/Container'
 import { CardTicket } from '../molecules/CardTicket'
-import { DECORATIVE_STRIPE, DECORATIVE_SPIRAL, DECORATIVE_SEGMENT } from '../../lib/assets'
+import { DECORATIVE_STRIPE, DECORATIVE_SEGMENT } from '../../lib/assets'
 
 const tickets = [
   {
-    name: 'Day ticket',
-    description: 'Accesso a una giornata del festival',
-    price: '35 €',
+    name: 'Full festival',
+    description: 'From Friday afternoon to Sunday morning, camping included. The ultimate way to enjoy the festival.',
+    price: '130 €',
+    originalPrice: '150 €',
+    bg: 'var(--color-bg-fresh-2)',
+    showBestTag: true,
+  },
+  {
+    name: 'Friday only pass',
+    description: 'From Friday afternoon to evening.',
+    price: '50 €',
     bg: 'var(--color-bg-warm-2)',
     decorative: DECORATIVE_STRIPE,
     showBestTag: false,
   },
   {
-    name: 'Weekend',
-    description: 'Accesso completo al weekend — la scelta giusta',
-    price: '100 €',
-    originalPrice: '120 €',
-    bg: 'var(--color-bg-fresh-2)',
-    decorative: DECORATIVE_SPIRAL,
-    showBestTag: true,
-  },
-  {
-    name: 'Full festival',
-    description: 'Tre giorni interi di STP 26',
+    name: 'Saturday only pass',
+    description: 'From Saturday morning to evening, camping included.',
     price: '80 €',
     bg: 'var(--color-bg-warm-3)',
     decorative: DECORATIVE_SEGMENT,
@@ -49,7 +48,7 @@ export function TicketSection() {
               color: 'var(--color-neutral-1000)',
             }}
           >
-            SCEGLI IL TUO BIGLIETTO
+            CHOOSE YOUR TICKET
           </p>
           <p
             className="font-[family-name:var(--font-primary)] w-full"
@@ -60,7 +59,7 @@ export function TicketSection() {
               color: 'var(--color-neutral-1000)',
             }}
           >
-            Tre format per vivere STP
+            Three ways to experience STP
           </p>
         </div>
 

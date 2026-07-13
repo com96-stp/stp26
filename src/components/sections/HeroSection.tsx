@@ -73,7 +73,7 @@ export function HeroSection() {
               color: 'var(--color-text-default)',
             }}
           >
-            🗓️ 11 - 13 september 2026
+            🗓️ September 11 - 13, 2026
           </p>
         </div>
 
@@ -89,17 +89,16 @@ export function HeroSection() {
           data-reveal
           data-reveal-delay="360"
         >
-          Tre giorni di musica, arte, performance<br />
-          e gente con cui vale la pena stare.
+          Three days of music, art, performances, and great company worth your time.
         </p>
 
-        {/* CTAs — mobile: stacked full-width · desktop (xl): hug + inline, "Be part" | 24px | "Follow us" */}
+        {/* CTAs — mobile: stacked full-width · desktop (xl): hug + inline, 24px gap */}
         <div
           className="flex flex-col gap-[var(--spacing-16)] w-full xl:w-auto xl:flex-row xl:gap-[var(--spacing-24)]"
           data-reveal
           data-reveal-delay="540"
         >
-          <Button label="Be part of the Festival" variant="accent" href="#tickets" className="w-full xl:w-auto" />
+          <Button label="Join the Festival" variant="accent" href="#tickets" className="w-full xl:w-auto" />
           <Button label="Follow us on Instagram" variant="accent-secondary" href="#" className="w-full xl:w-auto" />
         </div>
       </div>
