@@ -93,7 +93,7 @@ export function Header() {
 
             <div className="flex flex-col" style={{ gap: '10px' }}>
               <Button label="Be part of the Festival" variant="accent" href="#tickets" className="w-full" />
-              <Button label="Follow us on Instagram" variant="accent-secondary" href="#" className="w-full" />
+              <Button label="Follow us on Instagram" variant="accent-secondary" href="https://www.instagram.com/stop.all.ansia/" className="w-full" />
             </div>
           </div>
         </div>

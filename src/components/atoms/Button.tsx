@@ -34,9 +34,12 @@ export function Button({
   size = 'default',
   className = '',
 }: ButtonProps) {
+  const isExternal = /^https?:\/\//.test(href)
+
   return (
     <a
       href={href}
+      {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
       className={[
         'inline-flex items-center justify-center',
         'min-w-[96px] rounded-[var(--radius-full)]',

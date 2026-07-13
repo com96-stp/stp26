@@ -99,7 +99,7 @@ export function HeroSection() {
           data-reveal-delay="540"
         >
           <Button label="Join the Festival" variant="accent" href="#tickets" className="w-full xl:w-auto" />
-          <Button label="Follow us on Instagram" variant="accent-secondary" href="#" className="w-full xl:w-auto" />
+          <Button label="Follow us on Instagram" variant="accent-secondary" href="https://www.instagram.com/stop.all.ansia/" className="w-full xl:w-auto" />
         </div>
       </div>
     </section>
