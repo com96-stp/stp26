@@ -60,7 +60,7 @@ export function ArtistsSection() {
               fontSize: 'var(--text-sm)',
             }}
           >
-            MORE THAN JUST A FESTIVAL
+            MORE THAN JUST MUSIC
           </p>
           <p
             className="font-[family-name:var(--font-primary)] w-full"
@@ -80,7 +80,7 @@ export function ArtistsSection() {
               lineHeight: 'var(--leading-lg)',
             }}
           >
-            Artists who will make STP an unforgettable edition
+            Everything that will make STP an unforgettable edition
           </p>
         </div>
 

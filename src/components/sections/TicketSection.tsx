@@ -2,13 +2,13 @@ import { Container } from '../layout/Container'
 import { CardTicket } from '../molecules/CardTicket'
 import { DECORATIVE_STRIPE, DECORATIVE_SEGMENT } from '../../lib/assets'
 
-// DOM order = mobile stack order (Full festival first, as the featured tier).
-// `xlOrder` re-sequences the row on desktop only so the featured "Full festival"
+// DOM order = mobile stack order (Full event first, as the featured tier).
+// `xlOrder` re-sequences the row on desktop only so the featured "Full event"
 // card sits in the center column for extra prominence.
 const tickets = [
   {
-    name: 'Full festival',
-    description: 'From Friday afternoon to Sunday morning, camping included. The ultimate way to enjoy the festival.',
+    name: 'Full event',
+    description: 'From Friday afternoon to Sunday morning, camping included. The ultimate way to enjoy the event.',
     price: '130 €',
     originalPrice: '150 €',
     bg: 'var(--color-bg-fresh-2)',
@@ -16,8 +16,8 @@ const tickets = [
     xlOrder: 'xl:order-2',
   },
   {
-    name: 'Friday only pass',
-    description: 'From Friday afternoon to evening.',
+    name: 'Friday only',
+    description: 'From Friday afternoon to evening, camping included.',
     price: '50 €',
     bg: 'var(--color-bg-warm-2)',
     decorative: DECORATIVE_STRIPE,
@@ -25,7 +25,7 @@ const tickets = [
     xlOrder: 'xl:order-1',
   },
   {
-    name: 'Saturday only pass',
+    name: 'Saturday only',
     description: 'From Saturday morning to evening, camping included.',
     price: '80 €',
     bg: 'var(--color-bg-warm-3)',
@@ -54,7 +54,7 @@ export function TicketSection() {
               color: 'var(--color-neutral-1000)',
             }}
           >
-            CHOOSE YOUR TICKET
+            CHOOSE HOW TO JOIN
           </p>
           <p
             className="font-[family-name:var(--font-primary)] w-full"
@@ -66,6 +66,17 @@ export function TicketSection() {
             }}
           >
             Three ways to experience STP
+          </p>
+          <p
+            className="font-[family-name:var(--font-primary)] w-full"
+            style={{
+              fontWeight: 'var(--weight-medium)' as unknown as number,
+              fontSize: 'var(--text-base)',
+              lineHeight: 'var(--leading-base)',
+              color: 'var(--color-text-default)',
+            }}
+          >
+            <span style={{ fontWeight: 'var(--weight-semibold)' as unknown as number }}>Participation fee</span> is required to secure your spot.
           </p>
         </div>
 

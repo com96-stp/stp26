@@ -57,7 +57,7 @@ export function LocationSection() {
                 lineHeight: 'var(--leading-2xl)',
               }}
             >
-              Lago Arenile, Carignano (TO), Piedmont
+              Carignano (TO), Piedmont
             </p>
           </div>
 

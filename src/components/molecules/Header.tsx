@@ -55,7 +55,7 @@ export function Header() {
             ))}
           </nav>
 
-          <Button label="Buy your ticket" variant="accent" size="small" href="#tickets" />
+          <Button label="Join the event" variant="accent" size="small" href="#tickets" />
         </div>
       </header>
 

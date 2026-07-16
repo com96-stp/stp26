@@ -17,7 +17,7 @@ export function FooterSection() {
           />
         </div>
 
-        {/* "A project of" */}
+        {/* Disclaimer (same copy as the Hero "Logo w disclaimer" block) */}
         <p
           className="font-[family-name:var(--font-primary)] text-center"
           style={{
@@ -27,7 +27,7 @@ export function FooterSection() {
             color: 'var(--color-neutral-0)',
           }}
         >
-          A project of
+          Private event for members of the La Marina Collective Association
         </p>
 
         {/* La Marina logo */}

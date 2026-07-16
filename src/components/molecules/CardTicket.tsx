@@ -97,7 +97,7 @@ export function CardTicket({
             {price}
           </span>
         </div>
-        <Button label="Buy" variant="accent" href={href} />
+        <Button label="Join" variant="accent" href={href} />
       </div>
     </div>
   )

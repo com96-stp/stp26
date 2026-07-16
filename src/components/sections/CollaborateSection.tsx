@@ -65,7 +65,7 @@ export function CollaborateSection() {
               eyebrow="CALL FOR VOLUNTEERS"
               title="Want to lend a hand?"
               description="Entrance checks, bar service, order and cleaning, or simply answering participants' questions."
-              ctaLabel="Submit your project"
+              ctaLabel="Be a volunteer"
               bg="warm-1"
               ctaHref="#"
             />

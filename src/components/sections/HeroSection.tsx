@@ -43,13 +43,26 @@ export function HeroSection() {
 
       {/* Centered content column (narrow on desktop so CTAs don't stretch) */}
       <div className="relative z-10 mx-auto flex w-full max-w-[600px] flex-col items-center gap-[var(--spacing-40)] px-[var(--mobile-margin)]">
-        {/* Logo Extended */}
-        <div className="shrink-0" style={{ width: '357px', height: '156px' }} data-reveal>
-          <img
-            src={LOGO_EXTENDED}
-            alt="Stop all'Ansia"
-            className="w-full h-full object-contain"
-          />
+        {/* Logo w disclaimer */}
+        <div className="flex flex-col items-center gap-[var(--spacing-8)] shrink-0 w-full" data-reveal>
+          <div className="shrink-0" style={{ width: '357px', height: '156px' }}>
+            <img
+              src={LOGO_EXTENDED}
+              alt="Stop all'Ansia"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <p
+            className="font-[family-name:var(--font-primary)] text-center w-full"
+            style={{
+              fontWeight: 'var(--weight-regular)' as unknown as number,
+              fontSize: 'var(--text-sm)',
+              lineHeight: 'var(--leading-sm)',
+              color: 'var(--color-text-default)',
+            }}
+          >
+            Private event for members of the La Marina Collective Association
+          </p>
         </div>
 
         {/* Date pill */}
@@ -98,7 +111,7 @@ export function HeroSection() {
           data-reveal
           data-reveal-delay="540"
         >
-          <Button label="Join the Festival" variant="accent" href="#tickets" className="w-full xl:w-auto" />
+          <Button label="Join the event" variant="accent" href="#tickets" className="w-full xl:w-auto" />
           <Button label="Follow us on Instagram" variant="accent-secondary" href="https://www.instagram.com/stop.all.ansia/" className="w-full xl:w-auto" />
         </div>
       </div>
