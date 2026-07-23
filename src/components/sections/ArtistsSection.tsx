@@ -109,7 +109,7 @@ export function ArtistsSection() {
         <Button
           label="Updates on Instagram"
           variant="on-indigo"
-          href="#"
+          href="https://www.instagram.com/stop.all.ansia/"
           className="w-full xl:w-auto"
         />
       </Container>
