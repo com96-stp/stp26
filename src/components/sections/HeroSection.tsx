@@ -102,7 +102,7 @@ export function HeroSection() {
           data-reveal
           data-reveal-delay="360"
         >
-          Three days of music, art, performances, and great company worth your time.
+          A weekend of music, art, good food, camping and great company worth your time.
         </p>
 
         {/* CTAs — mobile: stacked full-width · desktop (xl): hug + inline, 24px gap */}

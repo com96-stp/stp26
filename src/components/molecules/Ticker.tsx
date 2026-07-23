@@ -1,7 +1,7 @@
 const ITEMS = [
   "Stop all'Ansia 26",
   "September 11–13",
-  "CARIGNANO | PIEDMONT",
+  "SOUTH OF TURIN",
 ]
 
 /**

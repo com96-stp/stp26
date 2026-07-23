@@ -18,7 +18,6 @@ import filRougeRedHero from '../asset/fil-rouge-red-hero-mobile.png'
 import filRougeBluDesk from '../asset/fil-rouge-blu-desk.svg'
 import filRougeRedDesk from '../asset/fil-rouge-red-2-desk.png'
 import filRougeRedHeroDesk from '../asset/fil-rouge-red-hero-desk.svg'
-import pinLocation from '../asset/pin-location.svg'
 import hart from '../asset/hart-collab.svg'
 
 // Merch
@@ -28,9 +27,6 @@ import merchBag from '../asset/merch/stp-bag.png'
 // Collage (Artists section)
 import collageMusic from '../asset/collage/music-cover.png'
 import collageWorkshop from '../asset/collage/workshop-cover.png'
-
-// Location map
-import mapImage from '../asset/map.png'
 
 // Menu icons — hamburger (menu closed) / X (menu open)
 import iconHamburger from '../asset/icons/menu-hamburger.svg'
@@ -51,7 +47,6 @@ export const FIL_ROUGE_RED_HERO = filRougeRedHero
 export const FIL_ROUGE_BLU_DESK = filRougeBluDesk
 export const FIL_ROUGE_RED_DESK = filRougeRedDesk
 export const FIL_ROUGE_RED_HERO_DESK = filRougeRedHeroDesk
-export const PIN_LOCATION = pinLocation
 export const HART = hart
 
 // Merch
@@ -65,6 +60,3 @@ export const COLLAGE_WORKSHOP = collageWorkshop
 // Menu icons (local, bundled)
 export const ICON_HAMBURGER = iconHamburger
 export const ICON_CLOSE = iconClose
-
-// Map (Location section) — local asset, no external dependency
-export const MAP_IMAGE = mapImage

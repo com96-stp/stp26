@@ -1,7 +1,6 @@
 import { Container } from '../layout/Container'
 import { Button } from '../atoms/Button'
 import { CardExpressive } from '../molecules/CardExpressive'
-import { BannerSlim } from '../molecules/BannerSlim'
 import { FIL_ROUGE_BLU, FIL_ROUGE_BLU_DESK, COLLAGE_MUSIC, COLLAGE_WORKSHOP } from '../../lib/assets'
 
 export function ArtistsSection() {
@@ -112,16 +111,6 @@ export function ArtistsSection() {
           variant="on-indigo"
           href="#"
           className="w-full xl:w-auto"
-        />
-
-        {/* BannerSlim — full-width horizontal (xl) */}
-        <BannerSlim
-          title="Do you have a project to share?"
-          description="Music, visual art, performance, workshops, lectures. Whatever form art takes, it matters to us."
-          ctaLabel="Submit your project"
-          bg="cold"
-          size="desktop"
-          className="w-full"
         />
       </Container>
     </section>
