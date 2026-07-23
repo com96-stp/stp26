@@ -1,6 +1,18 @@
 import { Container } from '../layout/Container'
 import { Banner } from '../molecules/Banner'
-import { MERCH_TEE, MERCH_BAG } from '../../lib/assets'
+import { MERCH_BAG } from '../../lib/assets'
+
+// STP Tee show-reel — every image dropped in src/asset/merch/tee/ is picked up
+// automatically, ordered by filename (natural/numeric sort, so "… 01", "… 02",
+// … "… 10" stay in order). Add/remove files, no code change needed.
+const teeReel = Object.entries(
+  import.meta.glob('../../asset/merch/tee/*.{png,jpg,jpeg,webp}', {
+    eager: true,
+    import: 'default',
+  }) as Record<string, string>,
+)
+  .sort(([a], [b]) => a.localeCompare(b, undefined, { numeric: true }))
+  .map(([, src]) => src)
 
 export function MerchSection() {
   return (
@@ -46,9 +58,8 @@ export function MerchSection() {
           </p>
         </div>
 
-        {/* STP Tee — xl variant (horizontal on desktop) */}
+        {/* STP Tee — xl variant (horizontal on desktop); media is the show-reel */}
         <Banner
-          imageSrc={MERCH_TEE}
           heading="STP Tee"
           description={`This shirt is made entirely from GOTS-certified sustainable organic cotton.\n\nShirt: Stanley Stella Sparker - Relaxed/Over fit - 100% spun and combed organic cotton, 220 GSM - 1x1 rib crew neck. Printed front and back.`}
           price="30 €"
@@ -56,6 +67,7 @@ export function MerchSection() {
           ctaLabel="Pre-order your tee"
           ctaHref="#"
           size="desktop"
+          reel={teeReel}
         />
 
         {/* STP Bag — xl variant */}

@@ -20,8 +20,7 @@ import filRougeRedDesk from '../asset/fil-rouge-red-2-desk.png'
 import filRougeRedHeroDesk from '../asset/fil-rouge-red-hero-desk.svg'
 import hart from '../asset/hart-collab.svg'
 
-// Merch
-import merchTee from '../asset/merch/stp-tee.png'
+// Merch (STP Tee uses the show-reel in src/asset/merch/tee/, not a single asset)
 import merchBag from '../asset/merch/stp-bag.png'
 
 // Collage (Artists section)
@@ -50,7 +49,6 @@ export const FIL_ROUGE_RED_HERO_DESK = filRougeRedHeroDesk
 export const HART = hart
 
 // Merch
-export const MERCH_TEE = merchTee
 export const MERCH_BAG = merchBag
 
 // Collage (Artists section)

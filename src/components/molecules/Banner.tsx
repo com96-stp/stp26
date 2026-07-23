@@ -1,7 +1,10 @@
+import { useEffect, useState } from 'react'
 import { Button } from '../atoms/Button'
+import { PlayPause } from '../atoms/PlayPause'
 
 interface BannerProps {
-  imageSrc: string
+  /** Static media image. Optional when a `reel` is provided (the reel replaces it). */
+  imageSrc?: string
   heading: string
   description: string
   price: string
@@ -16,7 +19,17 @@ interface BannerProps {
   size?: 'mobile' | 'desktop'
   /** Desktop (xl) only: swap sides — media on the right, content on the left. */
   reverse?: boolean
+  /**
+   * Optional media show-reel. When provided, the media auto-crossfades (dissolve)
+   * through the images, one every 3s, looping, controlled by a PlayPause button
+   * (bottom-left of the media). Starts playing; clicking pauses and holds the
+   * image currently in focus. Without a reel the media is the static `imageSrc`
+   * and no PlayPause is rendered.
+   */
+  reel?: string[]
 }
+
+const SLIDE_MS = 3000
 
 export function Banner({
   imageSrc,
@@ -28,8 +41,21 @@ export function Banner({
   ctaHref = '#',
   size = 'mobile',
   reverse = false,
+  reel,
 }: BannerProps) {
   const responsive = size === 'desktop'
+  const hasReel = !!reel && reel.length > 0
+
+  const [isPlaying, setIsPlaying] = useState(true)
+  const [index, setIndex] = useState(0)
+
+  // Auto-advance the reel every 3s while playing (loops). Pausing stops the
+  // timer and leaves `index` where it is → the focused image stays on screen.
+  useEffect(() => {
+    if (!hasReel || !isPlaying || reel!.length < 2) return
+    const id = setInterval(() => setIndex((i) => (i + 1) % reel!.length), SLIDE_MS)
+    return () => clearInterval(id)
+  }, [hasReel, isPlaying, reel])
 
   const rootCls = [
     'flex flex-col gap-[var(--spacing-24)] items-start w-full',
@@ -56,12 +82,35 @@ export function Banner({
     <div className={rootCls}>
       {/* Square media */}
       <div className={mediaCls} style={{ aspectRatio: '1 / 1' }}>
-        <img
-          src={imageSrc}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        {hasReel ? (
+          // Show-reel: stacked images, crossfaded (dissolve) via opacity
+          reel!.map((src, i) => (
+            <img
+              key={src}
+              src={src}
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-[var(--ease-out)] motion-reduce:transition-none"
+              style={{ opacity: i === index ? 1 : 0 }}
+            />
+          ))
+        ) : (
+          <img
+            src={imageSrc}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        )}
+
+        {/* PlayPause — only when there's a reel to control; bottom-left (24px mobile / 40px desktop) */}
+        {hasReel && (
+          <PlayPause
+            isPlaying={isPlaying}
+            onClick={() => setIsPlaying((p) => !p)}
+            className="absolute z-10 bottom-[var(--spacing-24)] left-[var(--spacing-24)] xl:bottom-[var(--spacing-40)] xl:left-[var(--spacing-40)]"
+          />
+        )}
       </div>
 
       {/* Content */}
