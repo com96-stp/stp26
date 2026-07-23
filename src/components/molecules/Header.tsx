@@ -55,7 +55,7 @@ export function Header() {
             ))}
           </nav>
 
-          <Button label="Join the event" variant="accent" size="small" href="#tickets" />
+          <Button label="Join the event" variant="accent" size="small" href="https://2026.stopallansia.com/cart-event/?ide=12692&idcal=1779625153" />
         </div>
       </header>
 

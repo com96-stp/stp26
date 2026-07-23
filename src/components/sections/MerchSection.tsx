@@ -65,7 +65,7 @@ export function MerchSection() {
           price="30 €"
           originalPrice="40 €"
           ctaLabel="Pre-order your tee"
-          ctaHref="#"
+          ctaHref="https://forms.gle/B1equwhsH7noDbqe6"
           size="desktop"
           reel={teeReel}
         />

@@ -83,7 +83,7 @@ export function TicketSection() {
         <div className="flex flex-col gap-[var(--spacing-24)] w-full xl:flex-row xl:gap-[var(--desktop-gutter)] xl:items-stretch">
           {tickets.map(({ xlOrder, ...ticket }) => (
             <div key={ticket.name} className={`w-full xl:flex-1 ${xlOrder}`}>
-              <CardTicket {...ticket} href="#" />
+              <CardTicket {...ticket} href="https://2026.stopallansia.com/cart-event/?ide=12692&idcal=1779625153" />
             </div>
           ))}
         </div>
