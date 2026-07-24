@@ -1,6 +1,5 @@
 import { Container } from '../layout/Container'
 import { Banner } from '../molecules/Banner'
-import { MERCH_BAG } from '../../lib/assets'
 
 // STP Tee show-reel — every image dropped in src/asset/merch/tee/ is picked up
 // automatically, ordered by filename (natural/numeric sort, so "… 01", "… 02",
@@ -68,19 +67,6 @@ export function MerchSection() {
           ctaHref="https://forms.gle/B1equwhsH7noDbqe6"
           size="desktop"
           reel={teeReel}
-        />
-
-        {/* STP Bag — xl variant */}
-        <Banner
-          imageSrc={MERCH_BAG}
-          heading="STP Bag"
-          description={`This bag is made entirely from GOTS-certified sustainable organic cotton.\n\nMaterial: 100% spun and combed organic cotton, durable and eco-friendly.`}
-          price="15 €"
-          originalPrice="20 €"
-          ctaLabel="Pre-order your bag"
-          ctaHref="#"
-          size="desktop"
-          reverse
         />
       </Container>
     </section>
