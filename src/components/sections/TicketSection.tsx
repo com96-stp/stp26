@@ -9,7 +9,8 @@ const tickets = [
   {
     name: 'Full event',
     description: 'From Friday afternoon to Sunday morning, camping included. The ultimate way to enjoy the event.',
-    price: '100 €',
+    price: '80 €',
+    originalPrice: '90 €',
     bg: 'var(--color-bg-fresh-2)',
     showBestTag: true,
     xlOrder: 'xl:order-2',
@@ -17,7 +18,7 @@ const tickets = [
   {
     name: 'Friday only',
     description: 'From Friday afternoon to evening, camping included.',
-    price: '32,5 €',
+    price: '40 €',
     bg: 'var(--color-bg-warm-2)',
     decorative: DECORATIVE_STRIPE,
     showBestTag: false,
@@ -26,7 +27,7 @@ const tickets = [
   {
     name: 'Saturday only',
     description: 'From Saturday morning to evening, camping included.',
-    price: '42,5 €',
+    price: '55 €',
     bg: 'var(--color-bg-warm-3)',
     decorative: DECORATIVE_SEGMENT,
     showBestTag: false,
