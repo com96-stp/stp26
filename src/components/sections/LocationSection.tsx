@@ -31,8 +31,8 @@ export function LocationSection() {
             lineHeight: 'var(--leading-2xl)',
           }}
         >
-          The exact location will be sent straight to your inbox, two weeks before we meet.<br /><br />
-          Keep an eye on it
+          The exact spot is a secret. You'll find it printed on your pass, and nowhere else.<br /><br />
+          Get the pass, unlock the place
         </p>
       </Container>
     </section>
