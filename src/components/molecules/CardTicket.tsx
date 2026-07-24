@@ -51,7 +51,7 @@ export function CardTicket({
         >
           {name}
         </p>
-        {showBestTag && <Tag label="THE BEST, OBV" variant="green" />}
+        {showBestTag && <Tag label="EARLY BIRD" variant="green" />}
       </div>
 
       {/* Description */}
