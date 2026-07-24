@@ -17,7 +17,7 @@ const tickets = [
   },
   {
     name: 'Friday only',
-    description: 'From Friday afternoon to evening, camping included.',
+    description: 'Only entrance on Friday until next morning. Includes camping spot for your tent.',
     price: '40 €',
     bg: 'var(--color-bg-warm-2)',
     decorative: DECORATIVE_STRIPE,
@@ -26,7 +26,7 @@ const tickets = [
   },
   {
     name: 'Saturday only',
-    description: 'From Saturday morning to evening, camping included.',
+    description: 'Only entrance on Saturday until next morning. Includes camping spot for your tent.',
     price: '55 €',
     bg: 'var(--color-bg-warm-3)',
     decorative: DECORATIVE_SEGMENT,
