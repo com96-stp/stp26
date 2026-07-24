@@ -12,11 +12,10 @@ import { FooterSection } from './components/sections/FooterSection'
 import { ComingSoonSection } from './components/sections/ComingSoonSection'
 import { HIDDEN_SECTIONS } from './lib/sectionVisibility'
 
-// Placeholder mode: shows only a minimal "coming soon" page while ticket
-// info / content is still being finalized. Flip to 'false' in .env (or the
-// hosting provider's env vars) to switch back to the full site — no code
-// changes or content loss, the full site stays fully built underneath.
-const COMING_SOON = import.meta.env.VITE_COMING_SOON !== 'false'
+// The site is LIVE: the full landing is the default. To temporarily bring back
+// the minimal "coming soon" placeholder, set VITE_COMING_SOON=true at build time
+// (nothing else changes — the placeholder component stays in the codebase).
+const COMING_SOON = import.meta.env.VITE_COMING_SOON === 'true'
 
 export default function App() {
   useLandingMotion()
