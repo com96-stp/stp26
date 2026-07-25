@@ -32,7 +32,7 @@ export function LocationSection() {
           }}
         >
           The exact spot is a secret. You'll find it printed on your pass, and nowhere else.<br /><br />
-          Get the pass, unlock the place
+          Get the pass, unlock the place!
         </p>
       </Container>
     </section>
