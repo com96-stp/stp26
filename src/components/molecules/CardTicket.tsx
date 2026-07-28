@@ -15,8 +15,6 @@ interface CardTicketProps {
 export function CardTicket({
   name,
   description,
-  price,
-  originalPrice,
   href = '#',
   bg,
   decorative,
@@ -67,36 +65,11 @@ export function CardTicket({
         {description}
       </p>
 
-      {/* Footer: price + CTA — pushed to the bottom on desktop (equal-height cards) */}
+      {/* Footer: CTA pinned bottom (equal-height cards). Price block removed per
+          request; the flex-1 spacer keeps the button's position (right) and the
+          min-height keeps the card height unchanged (reserves the price row). */}
       <div className="relative z-10 flex flex-wrap items-center gap-[var(--spacing-8)] xl:mt-auto">
-        {/* Price */}
-        <div
-          className="flex flex-1 items-center gap-[var(--spacing-8)] font-[family-name:var(--font-primary)]"
-          style={{ color: 'var(--color-text-default)' }}
-        >
-          {/* Discount / original price — always strikethrough, type lg-semibold (per Figma) */}
-          {originalPrice && (
-            <span
-              className="line-through"
-              style={{
-                fontWeight: 'var(--weight-semibold)' as unknown as number,
-                fontSize: 'var(--text-lg)',
-                lineHeight: 'var(--leading-lg)',
-              }}
-            >
-              {originalPrice}
-            </span>
-          )}
-          <span
-            style={{
-              fontWeight: 'var(--weight-bold)' as unknown as number,
-              fontSize: 'var(--text-4xl)',
-              lineHeight: 'var(--leading-4xl)',
-            }}
-          >
-            {price}
-          </span>
-        </div>
+        <div className="flex-1 min-h-[var(--leading-4xl)]" aria-hidden="true" />
         <Button label="Join" variant="accent" href={href} />
       </div>
     </div>
