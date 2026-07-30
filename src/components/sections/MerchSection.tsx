@@ -60,7 +60,7 @@ export function MerchSection() {
         {/* STP Tee — xl variant (horizontal on desktop); media is the show-reel */}
         <Banner
           heading="STP Tee"
-          description={`This shirt is made entirely from GOTS-certified sustainable organic cotton.\n\nShirt: Stanley Stella Sparker - Relaxed/Over fit - 100% spun and combed organic cotton, 220 GSM - 1x1 rib crew neck. Printed front and back.`}
+          description={`This shirt is made entirely from GOTS-certified sustainable organic cotton.\n\nShirt: Stanley Stella Blaster 2.0 - Relaxed/Over fit - 100% spun and combed organic cotton, 220 GSM - 1x1 rib crew neck. Printed front and back.`}
           price="30 €"
           originalPrice="40 €"
           ctaLabel="Pre-order your tee"
