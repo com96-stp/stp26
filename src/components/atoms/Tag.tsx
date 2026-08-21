@@ -1,15 +1,17 @@
 interface TagProps {
   label: string
-  variant?: 'green' | 'blue' | 'orange'
+  variant?: 'green' | 'blue' | 'orange' | 'muted'
+  strikethrough?: boolean
 }
 
 const tagStyles: Record<NonNullable<TagProps['variant']>, string> = {
   green: 'bg-[var(--color-bg-fresh-1)] text-[var(--color-emerald-50)]',
   blue: 'bg-[var(--color-bg-cold)] text-[var(--color-emerald-50)]',
   orange: 'bg-[var(--color-bg-warm-1)] text-[var(--color-emerald-50)]',
+  muted: 'bg-[#A5BAA1] text-[#2E3A2C]',
 }
 
-export function Tag({ label, variant = 'green' }: TagProps) {
+export function Tag({ label, variant = 'green', strikethrough = false }: TagProps) {
   return (
     <span
       className={[
@@ -23,7 +25,7 @@ export function Tag({ label, variant = 'green' }: TagProps) {
       ].join(' ')}
       style={{ fontWeight: 'var(--weight-extrabold)' as unknown as number }}
     >
-      {label}
+      <span className={strikethrough ? 'line-through' : undefined}>{label}</span>
     </span>
   )
 }

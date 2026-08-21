@@ -49,7 +49,12 @@ export function CardTicket({
         >
           {name}
         </p>
-        {showBestTag && <Tag label="EARLY BIRD" variant="green" />}
+        {showBestTag && (
+          <div className="flex flex-col items-end gap-[var(--spacing-4)]">
+            <Tag label="Early bird" variant="muted" strikethrough />
+            <Tag label="General release" variant="green" />
+          </div>
+        )}
       </div>
 
       {/* Description */}
